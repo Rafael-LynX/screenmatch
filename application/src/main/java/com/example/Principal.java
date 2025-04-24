@@ -1,8 +1,11 @@
 package com.example;
 
 import com.example.calculos.CalculadoraDeTempo;
+import com.example.model.Episodios;
 import com.example.model.Filme;
 import com.example.model.Serie;
+import com.example.calculos.FiltroRecomendacao;
+
 
 public class Principal {
     public static void main(String[] args) {
@@ -38,5 +41,16 @@ public class Principal {
         calculadora.inclui(outroFilme);
         calculadora.inclui(lost);
         System.out.println("Total de minutos: " + calculadora.getTempoTotal() + " minutos");
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodios episodios = new Episodios();
+        episodios.setNumero(1);
+        episodios.setSerie(lost);
+        episodios.setTotalVisualizacoes(1);
+        filtro.filtra(episodios);
+
+
     }
 }
