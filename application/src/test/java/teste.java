@@ -1,20 +1,17 @@
-import Aula3_Desafios.Desafio4.GeradorPrimo;
-import Aula3_Desafios.Desafio4.NumeroPrimos;
-import Aula3_Desafios.Desafio4.VerificarPrimo;
 
+import Aula4_Desafios.Desafio4.ConversorTemperaturaPadrao;
 
 public class teste {
    public static void main(String[] args) {
-        VerificarPrimo verificador = new VerificarPrimo();
-        verificador.verificarSeEhPrimo(7); // Exemplo de uso
-        verificador.verificarSeEhPrimo(17); // Exemplo de uso
-
-        GeradorPrimo gerador = new GeradorPrimo();
-        int proximoPrimo = gerador.gerarProximoPrimo(17); // Exemplo de uso
-        System.out.println("Próximo primo após 17: " + proximoPrimo);
-
-        NumeroPrimos numerosPrimos = new NumeroPrimos();
-        numerosPrimos.listarPrimos(50); // Exemplo de uso
+      ConversorTemperaturaPadrao conversor = new ConversorTemperaturaPadrao(); // Cria uma instância do conversor de temperatura
+      double celsius = 25.0; // Define a temperatura em Celsius
+      double fahrenheit = conversor.celsiusParaFahrenheit(celsius); // Converte Celsius para Fahrenheit
+      System.out.println(celsius + "°C = " + fahrenheit + "°F"); // Exibe o resultado da conversão
+      fahrenheit = 77.0; // Define a temperatura em Fahrenheit
+      celsius = conversor.fahrenheitParaCelsius(fahrenheit); // Converte Fahrenheit para Celsius
+      System.out.println(fahrenheit + "°F = " + celsius + "°C"); // Exibe o resultado da conversão
+      
+      
 
    }
 }
