@@ -24,5 +24,4 @@ public class Livro {
         System.out.println("Autor: " + this.autor);
         System.out.println("Título: " + this.titulo);
     }
-
 }
