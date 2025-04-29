@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.ArrayList;
+
 import com.example.calculos.CalculadoraDeTempo;
 import com.example.model.Episodios;
 import com.example.model.Filme;
@@ -50,6 +52,24 @@ public class Principal {
         episodios.setSerie(lost);
         episodios.setTotalVisualizacoes(1);
         filtro.filtra(episodios);
+
+        Filme favorito = new Filme();
+        favorito.setNome("O poderoso chefão");
+        favorito.setAnoDeLancamento(1972);
+        favorito.setDuracaoEmMinutos(175);
+
+        Filme outro = new Filme();
+        outro.setNome("Avatar");
+        outro.setAnoDeLancamento(2023);
+        outro.setDuracaoEmMinutos(200);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(favorito);
+        listaDeFilmes.add(outro);
+
+        System.out.println("Tamanho da lista: " +listaDeFilmes.size());
+        System.out.println("Primeiro Filme: " +listaDeFilmes.get(0));
+        System.out.println(listaDeFilmes);
 
 
     }
