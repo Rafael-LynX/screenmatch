@@ -1,4 +1,4 @@
-package listas_colecoes;
+package listas_colecoes.Aula_1;
 
 import java.util.ArrayList;
 

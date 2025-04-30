@@ -11,9 +11,7 @@ import com.example.calculos.FiltroRecomendacao;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1972);
+        Filme meuFilme = new Filme("O poderoso chefão", 1972);
         meuFilme.setDuracaoEmMinutos(175);
         System.out.println("Duração fo filme: " + meuFilme.getDuracaoEmMinutos());	
 
@@ -24,18 +22,14 @@ public class Principal {
         System.out.println("Total de Avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("Média de Avaliações: " + meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2004);
+        Serie lost = new Serie("Lost", 2004);
         lost.exibeFichaTecnica();
         lost.setTemporadas(6);
         lost.setEpisodiosPorTemporada(25);
         lost.setMinutosPorEpisodio(45);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos() + " minutos");
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -53,14 +47,10 @@ public class Principal {
         episodios.setTotalVisualizacoes(1);
         filtro.filtra(episodios);
 
-        Filme favorito = new Filme();
-        favorito.setNome("O poderoso chefão");
-        favorito.setAnoDeLancamento(1972);
+        Filme favorito = new Filme("O poderoso chefão", 1972);
         favorito.setDuracaoEmMinutos(175);
 
-        Filme outro = new Filme();
-        outro.setNome("Avatar");
-        outro.setAnoDeLancamento(2023);
+        var outro = new Filme("Avatar", 2023);
         outro.setDuracaoEmMinutos(200);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();

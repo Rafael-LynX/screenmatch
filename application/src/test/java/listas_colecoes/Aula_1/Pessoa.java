@@ -1,4 +1,4 @@
-package listas_colecoes;
+package listas_colecoes.Aula_1;
 
 public class Pessoa {
     private String nome;
