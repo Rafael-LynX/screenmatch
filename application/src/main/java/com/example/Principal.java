@@ -52,6 +52,7 @@ public class Principal {
 
         var outro = new Filme("Avatar", 2023);
         outro.setDuracaoEmMinutos(200);
+        outro.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(favorito);
