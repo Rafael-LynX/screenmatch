@@ -1,5 +1,8 @@
 package com.example.model;
 
+import com.example.utils.ErroDeConversaoDeAno;
+ 
+
 public class Titulo implements Comparable<Titulo> { 
     private String nome;
     private int anoDeLancamento;
@@ -11,6 +14,16 @@ public class Titulo implements Comparable<Titulo> {
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meTituloOmdb) {
+        this.nome = meTituloOmdb.Title();
+
+        if (meTituloOmdb.Year().length() > 4) {
+            throw new ErroDeConversaoDeAno("Ano passou de 4 caracteres");
+        }
+        this.anoDeLancamento = Integer.valueOf(meTituloOmdb.Year());
+        this.duracaoEmMinutos = Integer.valueOf(meTituloOmdb.Runtime().substring(0, 2));
     }
 
     // Getters
@@ -61,6 +74,11 @@ public class Titulo implements Comparable<Titulo> {
     @Override
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
+    }
+
+    @Override
+    public String toString(){
+        return "nome = " + this.nome + ", anoDeLancamento = " + this.anoDeLancamento + ", duracaoEmMinutos = " + this.duracaoEmMinutos; 
     }
 
 }

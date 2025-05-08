@@ -1,0 +1,11 @@
+com\example\PrincipalComBusca.class
+com\example\PrincipalComListas.class
+com\example\calculos\Classificavel.class
+com\example\model\Filme.class
+com\example\model\Serie.class
+com\example\Principal.class
+com\example\model\Titulo.class
+com\example\calculos\CalculadoraDeTempo.class
+com\example\calculos\FiltroRecomendacao.class
+com\example\model\TituloOmdb.class
+com\example\model\Episodios.class
