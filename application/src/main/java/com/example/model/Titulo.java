@@ -1,10 +1,13 @@
 package com.example.model;
 
 import com.example.utils.ErroDeConversaoDeAno;
+import com.google.gson.annotations.SerializedName;
  
 
 public class Titulo implements Comparable<Titulo> { 
+    @SerializedName("Title")
     private String nome;
+    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -78,7 +81,9 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString(){
-        return "nome = " + this.nome + ", anoDeLancamento = " + this.anoDeLancamento + ", duracaoEmMinutos = " + this.duracaoEmMinutos; 
+        return "(nome = " + nome +
+                ", anoDeLancamento = " + anoDeLancamento + "," +
+                " duração = " + duracaoEmMinutos + ")";
     }
 
 }
